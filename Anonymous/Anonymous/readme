@@ -3,3 +3,13 @@ delegate void TestDelegate(string s);
 TestDelegate testDelA = new TestDelegate(M);
 TestDelegate testDelB = delegate (string s) { Console.WriteLine(s); };
 TestDelegate testDelC = (x) => { Console.WriteLine(x); };
+-----------------------------------------------------------
+-----------------------------------------------------------
+System.Threading.Thread t1 = new System.Threading.Thread
+            (delegate () //ref , out不能用 , is 也不能用(無法判斷類型)
+            {
+                Console.Write("Hello, ");
+                Console.WriteLine("World!");
+            }
+            );
+            t1.Start();
