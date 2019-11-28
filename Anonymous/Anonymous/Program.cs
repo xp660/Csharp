@@ -21,8 +21,8 @@ namespace Anonymous
         static void Main(string[] args)
         {
             //DelegateHistory();
-            //StartThread();
-            Lambda();
+            StartThread();
+            //Lambda();
 
             Console.ReadLine();
         }
