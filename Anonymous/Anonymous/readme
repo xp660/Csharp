@@ -1,1 +1,5 @@
+delegate void TestDelegate(string s);
 
+TestDelegate testDelA = new TestDelegate(M);
+TestDelegate testDelB = delegate (string s) { Console.WriteLine(s); };
+TestDelegate testDelC = (x) => { Console.WriteLine(x); };
